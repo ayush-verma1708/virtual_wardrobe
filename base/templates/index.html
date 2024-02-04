@@ -1,0 +1,14 @@
+<h1>This is Page 1</h1>
+<p>Click the link to go to Page 2:</p>
+<a href="{% url 'add_clothes' %}">Go to Page 2</a>
+
+<h1>Upload Image here</h1>
+<div class="row">
+  {% for x in img %}
+  <div>
+    <div class="card m-2">
+      <img class="card-img-top" height="200px" src="{{x.photo.url}}" alt="" />
+    </div>
+  </div>
+  {% endfor %}
+</div>

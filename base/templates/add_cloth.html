@@ -1,0 +1,13 @@
+<h1>This is Page 2</h1>
+<p>Click the link to go back to Page 1:</p>
+<a href="{% url 'Wardrobe' %}">Go to Page 1</a>
+
+<div class="container">
+  <div>
+    <h1>Upload Image</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+      {% csrf_token %} {{form}}
+      <input type="submit" value="Upload" />
+    </form>
+  </div>
+</div>
