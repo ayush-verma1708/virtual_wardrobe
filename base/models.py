@@ -1,7 +1,9 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Image(models.Model):
-     
+    user = models.ForeignKey(User,on_delete=models.SET_NULL,null=True,blank=True)
+
     cloth_type_choices = [
         ('T-Shirt', 'T-Shirt'),
         ('Jeans', 'Jeans'),
